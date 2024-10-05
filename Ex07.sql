@@ -45,3 +45,21 @@ having count (*) = 5
 order by fatec asc;
 
 exercicio 8
+select unidade as "fatec", count(curso) as Quantidade, turno
+from tbcurso
+where municipio = 'São José dos Campos'
+group by fatec, turno
+order by fatec asc;
+
+exercicio 9
+select unidade as "fatec", turno, sum (vaga)
+from tbcurso
+where municipio = 'São José dos Campos'
+group by fatec, turno
+order by fatec asc;
+
+exercicio 10
+select turno, sum (vaga)
+from tbcurso
+group by turno
+order by turno asc
