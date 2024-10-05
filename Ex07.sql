@@ -16,13 +16,13 @@ from tbcurso
 group by unidade
 order by "Quantidade" desc
 
-ex04
+exercicio 04
 select unidade as "Fatec", count(*) as "Quantidade"
 from tbcurso
 group by unidade
 order by "Quantidade" desc limit 1
 
-ex05
+exercicio 05
 select unidade as "Fatec", count(*) as "Quantidade"
 from tbcurso
 group by unidade
