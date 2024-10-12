@@ -1,0 +1,4 @@
+-- ex 1 --
+select * from tbcurso as c, tbunidade as u, tbcurso_por_unidade as cpu
+where u.id = cpu.idunidade and c.id = cpu.idcurso
+and u.municipio = 'Jacareí' order by c.nome;
