@@ -44,7 +44,40 @@ set nota = nota + 0.2
 from tbdisciplina as d
 WHERE m.iddisciplina = d.id and d.nome = 'Modelagem de Banco de Dados';
 
+-- Ex.06 --
 select d.nome, a.nome, nota from tbaluno as a,
 tbmatricula as m, tbdisciplina as d
-where a. id = m. idaluno and m.iddisciplina = d.id;
+where a. id = m.idaluno and d.id = m.iddisciplina
+order by a.nome, d.nome;
+
+update tbmatricula as m
+set nota = 5.0
+from tbaluno as a, tbdisciplina as d
+where a.id = m.idaaluno and d.id = m.iddisciplina
+and a.nome = 'Luiz Carlos' and d.nome = 'Ingles I';
+
+-- Ex.07 --
+update tbmatricula as m
+set nota = 0.0
+from tbaluno as a, tbdisciplina as d
+where a.id = m.idaluno and d.id = m.iddisciplina
+and nota is null;
+
+select d.nome, a.nome, m.nota from tbaluno as a, tbmatricula as m,
+tbdisciplina as d  where a.id = m.idaluno and d.id = m.iddisciplina
+
+order by a.nome, d.nome
+
+-- Ex 08 --
+delete from tbmatricula
+where nota = 0.0;
+
+-- Ex 09--
+delete from tbmatricula as m
+using tbaluno as a, tbdisciplina as d
+where a.id = m.idaluno and d.id = m.iddisciplina
+and a.nome = 'Luiz Carlos' and d.nome = 'Ingles I'
+
+-- Ex10 --
+delete from tbmatricula;
 
