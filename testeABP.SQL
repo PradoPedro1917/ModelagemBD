@@ -22,7 +22,7 @@ CREATE TABLE usuario (
 );
 
 --!
-INSERT INTO tbquestionario(npagina, questoes, respostas)
+INSERT INTO tbquestionario(idquestionario, npagina, questoes, respostas)
 VALUES
 (1, 1, 'O Scrum é um framework ágil que pode ser utilizado apenas no desenvolvimento de software.', false),
 (2, 1, 'Os sprints no Scrum têm uma duração que varia de uma a quatro semanas.', true),
