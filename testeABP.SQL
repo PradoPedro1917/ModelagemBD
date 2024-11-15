@@ -1,5 +1,5 @@
 CREATE TABLE tbquestao (
-  usuario_mail INTEGER NOT NULL,
+  usuario_mail VARCHAR(20) NOT NULL,
   tbquestionario_idquestionario INTEGER NOT NULL,
   PRIMARY KEY(usuario_mail, tbquestionario_idquestionario)
   
