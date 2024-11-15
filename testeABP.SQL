@@ -14,7 +14,7 @@ CREATE TABLE tbquestionario (
 );
 
 CREATE TABLE usuario (
-  mail INTEGER NOT NULL,
+  mail VARCHAR(30) NOT NULL,
   nome VARCHAR(45) NULL,
   sobre VARCHAR(45) NULL,
   senha VARCHAR(10) NULL,
@@ -26,7 +26,7 @@ INSERT INTO tbquestionario(idquestionario, npagina, questoes, respostas)
 VALUES
 (1, 1, 'O Scrum é um framework ágil que pode ser utilizado apenas no desenvolvimento de software.', false),
 (2, 1, 'Os sprints no Scrum têm uma duração que varia de uma a quatro semanas.', true),
-(3, 1, 'O Scrum enfatiza a colaboração contínua entre equipes e stakeholders para garantir que o produto atenda às necessidades do cliente.', true)
+(3, 1, 'O Scrum enfatiza a colaboração contínua entre equipes e stakeholders para garantir que o produto atenda às necessidades do cliente.', true),
 (4, 2, 'Os três pilares do Scrum são fundamentais para garantir que o processo funcione de maneira eficaz e contínua.', true),
 (5, 2, 'O quadro de tarefas deve estar sempre visível para mostrar o que está sendo feito, concluído e o que ainda precisa ser realizado.', true),
 (6, 2, 'Após a Retrospectiva da Sprint, a equipe pode decidir manter as mesmas práticas para a próxima sprint, mesmo que tenha surgido um problema.', false),
