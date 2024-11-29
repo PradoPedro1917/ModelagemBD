@@ -51,17 +51,17 @@ VALUES
 ('65432198700', '101');
 
 -- Exercicio 4 --
-
+ 
 SELECT 
-	usuarios.cpf as "CPF",
-	usuarios.nome as "Nome",
-	usuarios.celular as "Celular",
-	filmes.idfilmes as "ID_Filme",
-	filmes.titulo as "Titulo",
-	filmes.genero as "Genero"
-	from usuarios, filmes, assistidos
-	where filmes.idfilmes = assistidos.filmes_idfilmes
-	and usuarios.cpf=assistidos.usuarios_cpf
+usuarios.cpf as "CPF",
+usuarios.nome as "Nome",
+usuarios.celular as "Celular",
+filmes.idfilmes as "ID_Filme",
+filmes.titulo as "Titulo",
+filmes.genero as "Genero"
+from usuarios, filmes, assistidos
+where filmes.idfilmes = assistidos.filmes_idfilmes
+and usuarios.cpf=assistidos.usuarios_cpf
 
 -- Exercicio 5 --
 
